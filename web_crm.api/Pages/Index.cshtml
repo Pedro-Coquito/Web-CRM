@@ -1,0 +1,47 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold m-0">Visão Geral</h2>
+        <button class="btn btn-primary btn-sm" id="CarregarDadosDashboard">Atualizar Dados</button>
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-12 col-md-4">
+            <div class="card border-0 shadow-sm border-top border-success border-4 h-100">
+                <div class="card-body">
+                    <h6 class="text-muted text-uppercase mb-2">Vendas do Dia</h6>
+                    <h2 class="fw-bold mb-0 text-success" id="valorVendas">R$ 0,00</h2>
+                    <small class="text-muted" id="qtdVendasTexto">0 pedidos finalizados</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <div class="card border-0 shadow-sm border-top border-info border-4 h-100">
+                <div class="card-body">
+                    <h6 class="text-muted text-uppercase mb-2">Total em Estoque</h6>
+                    <h2 class="fw-bold mb-0 text-info" id="qtdEstoque">0</h2>
+                    <small class="text-muted">Itens cadastrados no sistema</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <div class="card border-0 shadow-sm border-top border-danger border-4 h-100">
+                <div class="card-body">
+                    <h6 class="text-muted text-uppercase mb-2">Estoque Baixo</h6>
+                    <h2 class="fw-bold mb-0 text-danger" id="alertasEstoque">0</h2>
+                    <small class="text-muted">Produtos precisando de reposição</small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="/js/dashboard.js"></script>
