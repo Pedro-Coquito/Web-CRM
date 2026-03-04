@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace web_crm.api.Models;
+
+
+namespace web_crm.api.Models { 
+
+    [Table("produtos")]
     public class ProdutosModel {
-            
         public int Id {  get; private set; }
         public string Nome { get; set; }
         public double Peso { get; set; }
