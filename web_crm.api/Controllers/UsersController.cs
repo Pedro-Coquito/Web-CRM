@@ -1,8 +1,6 @@
 ﻿using Pomelo.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using web_crm.api.Models;
 
 namespace web_crm.api.Controllers{ 
     public class UsersController {

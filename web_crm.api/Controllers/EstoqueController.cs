@@ -1,5 +1,5 @@
 ﻿using System;
-using MySql.Data.MySqlClient;
+using Pomelo.EntityFrameworkCore;
 using web_crm.api.Models;
 
 
