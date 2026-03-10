@@ -2,7 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using web_crm.api.Models;
 
+/*
 namespace web_crm.api.Controllers{ 
+   
     public class UsersController {
 
 
@@ -30,3 +32,4 @@ namespace web_crm.api.Controllers{
         }
     }
 }
+*/ 
