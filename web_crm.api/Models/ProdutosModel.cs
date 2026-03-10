@@ -10,7 +10,7 @@ namespace web_crm.api.Models {
 
         [Key]
         [Column("idProdutos")]
-        public int Id {  get; private set; }
+        public int Id {  get; set; }
 
         [Column("nomeProdutos")]
         public string Nome { get; set; }
