@@ -9,7 +9,7 @@ function carregarDadosDashboard() {
         produtosAcabando: 5
     };
 
-    // 1. Formatando os valores para ficar profissional
+    // 1. Formatando os valores para fi car profissional
     // Transforma 1450.75 em "R$ 1.450,75" com padrão brasileiro
     const valorFormatado = new Intl.NumberFormat('pt-BR', {
         style: 'currency',
