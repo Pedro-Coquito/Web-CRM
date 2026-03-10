@@ -1,0 +1,82 @@
+﻿@page "/estoque"
+@model web_crm.api.Pages.EstoqueModel
+@{
+    ViewData["Title"] = "Estoque de Produtos";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="fw-bold m-0">Gerenciamento de Estoque</h2>
+            <p class="text-muted">Visualize e gerencie seus produtos cadastrados.</p>
+        </div>
+        <button type="button "class="btn btn-success fw-bold" data-bs-toggle="modal" data-bs-target="#modalNovoProduto">+ Novo Produto</button>
+    </div>
+
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover table-striped m-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th class="py-3 px-4">ID</th>
+                            <th class="py-3">Nome do Produto</th>
+                            <th class="py-3">Preço</th>
+                            <th class="py-3">Estoque</th>
+                            <th class="py-3 text-center">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpoTabelaProdutos">
+                        <tr>
+                            <td colspan="5" class="text-center py-4 text-muted">Carregando produtos...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="modal fade" id="modalNovoProduto" tabindex="-1" aria-labelledby="modalNovoProdutoLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header bg-dark text-white">
+                        <h5 class="modal-title" id="modalNovoProdutoLabel">Cadastrar Novo Produto</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form id="formNovoProduto">
+                            <div class="mb-3">
+                                <label for="nomeProdutos" class="form-label fw-bold">Nome do Produto</label>
+                                <input type="text" class="form-control" id="nomeProdutos" placeholder="Ex: Teclado Mecânico" required>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="preco" class="form-label fw-bold">Preço de Venda (R$)</label>
+                                    <input type="number" step="0.01" class="form-control" id="preco" placeholder="0.00" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="pesoProdutos" class="form-label fw-bold">Peso (kg)</label>
+                                    <input type="number" step="0.01" class="form-control" id="pesoProdutos" placeholder="0.00" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="valorDeCompra" class="form-label fw-bold">Valor de Compra (R$)</label>
+                                <input type="number" step="0.01" class="form-control" id="valorDeCompra" placeholder="0.00" required>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-success" id="btnSalvarProduto">Salvar Produto</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="~/js/estoque.js"></script>
+    </div>
+</div>
