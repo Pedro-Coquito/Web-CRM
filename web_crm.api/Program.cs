@@ -18,7 +18,7 @@ public class Program
 
         // Add services to the container.
         builder.Services.AddRazorPages();
-
+        builder.Services.AddControllers();
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
@@ -30,12 +30,13 @@ public class Program
         }
 
         app.UseHttpsRedirection();
-
+        app.UseStaticFiles();
         app.UseRouting();
 
         app.UseAuthorization();
 
         app.MapStaticAssets();
+        app.MapControllers();
         app.MapRazorPages()
            .WithStaticAssets();
 
